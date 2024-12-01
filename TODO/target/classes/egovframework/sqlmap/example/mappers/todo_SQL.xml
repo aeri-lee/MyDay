@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.TODO.service.impl.todoMapper">
+
+	<resultMap id="todo" type="egovframework.TODO.service.todoVO">
+		<result property="ID" column="ID"/>
+		<result property="NAME" column="NAME"/>
+		<result property="PASS" column="PASS"/>
+		<result property="EMAIL" column="EMAIL"/>
+		
+		<result property="BOARD_ID" column="BOARD_ID"/>
+		<result property="TITLE" column="TITLE"/>
+		<result property="CNST" column="CNST"/>
+		<result property="COMPLETE_YN" column="COMPLETE_YN"/>
+		<result property="TODO_DATE" column="TODO_DATE"/>
+	</resultMap>
+	
+	<select id="selectLogin" resultMap="todo" parameterType="todoVO" >
+			SELECT
+				ID
+				, PASS
+				, NAME
+				, EMAIL
+			FROM PRJ.TB_MEMBER
+			WHERE ID=#{ID} 
+			      AND PASS=#{PASS}
+	</select>
+
+	<insert id="insertMember" parameterType="todoVO">
+			INSERT INTO PRJ.TB_MEMBER
+					(ID
+					, NAME
+					, PASS
+					, EMAIL
+					, CREATE_DT)
+				VALUES (#{ID}
+					   , #{NAME}
+					   , #{PASS}
+					   , #{EMAIL}
+					   , SYSDATE)
+	</insert>
+
+	<insert id="insertTodoList" parameterType="todoVO">
+	    INSERT INTO PRJ.TB_BOARD
+	   				 (BOARD_ID
+	   				 , TITLE
+	   				 , CNST
+	   				 , COMPLETE_YN
+	   				 , ID
+	   				 , CREATE_DT
+	   				 , TODO_DATE)
+		   VALUES (#{BOARD_ID}
+		   		   , #{TITLE}
+		   		   , #{CNST}
+		   		   , #{COMPLETE_YN}
+		   		   , #{ID}
+		   		   , SYSDATE
+		   		   , TO_CHAR(SYSDATE, 'YYYY-MM-DD'))
+	</insert>
+	
+	<select id="selectTodoList" resultMap="todo" parameterType="todoVO" >
+	SELECT BOARD_ID , TITLE
+	   				 , CNST
+	   				 , COMPLETE_YN
+	   				 , ID
+	   				 , TO_CHAR(TODO_DATE, 'YYYY-MM-DD') AS TODO_DATE
+	   	FROM PRJ.TB_BOARD
+	   	WHERE ID=#{ID}
+	   	 	AND TO_CHAR(TODO_DATE, 'YYYY-MM-DD') = TO_CHAR(SYSDATE, 'YYYY-MM-DD')
+	</select>
+	
+	<update id="updateTodoList" parameterType="todoVO">
+	UPDATE PRJ.TB_BOARD 
+	SET TITLE=#{TITLE}
+		, CNST=#{CNST}
+		, COMPLETE_YN=#{COMPLETE_YN}
+		, UPDATE_DT=SYSDATE 
+	WHERE BOARD_ID=#{BOARD_ID} 
+		AND TRUNC(TODO_DATE) = TO_DATE(#{TODO_DATE,jdbcType=VARCHAR}, 'YYYY-MM-DD')
+		AND ID=#{ID}
+	</update>
+</mapper>

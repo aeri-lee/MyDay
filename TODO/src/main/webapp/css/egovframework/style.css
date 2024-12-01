@@ -1,0 +1,243 @@
+
+* { 
+	margin:0;
+	padding:0; 
+	background-color:#fafafa;
+	font-family: "Nanum Gothic", sans-serif;
+}
+
+body {
+	margin:0; 
+	padding:0; 
+
+	font-size:12px; 
+	color:black; 
+
+}
+	
+input ,form{background-color: white;}
+
+table, th, td {background-color: white;}
+
+button{cursor: pointer;}
+
+.todoTitle{
+	text-align:center;
+	font-size: 60px; /* 폰트 크기 설정 */
+	font-weight: bold; /* 폰트 굵기 설정 */
+}
+
+.todoTitle p{
+	margin-top:80px;
+	color: black;
+}
+
+.todoCnst {
+    border: 3px solid #00affff0; /* 테두리 두께, 스타일, 색상 */
+    border-radius: 8px; /* 테두리 모서리를 둥글게 (선택 사항) */
+    padding: 10px; /* 내용과 테두리 사이의 여백 */
+    margin: 50px 20px 10px 20px; /* 외부 요소와의 간격 */
+    background-color: #fff;
+    height:100px
+}
+ .todoCnst table{
+    margin: 20px;
+ }
+ 
+
+.todoCnst button {
+    float: right;
+    padding: 20px;
+    background-color: #003f5c;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    position: absolute;
+    top: 232px;
+    right: 40px
+}
+
+.todoCnst input{
+	height:50px;
+	width:250px;
+	border: 2px solid #003f5c;
+	border-radius:3px;
+	padding: 3px;
+    font-size: 16px;
+}
+
+.todoCnst td {
+  color:black
+} 
+
+.todo{
+	margin-right:15px;
+	margin-left:5px;
+	
+}
+
+.todomemo{
+	width: 700px !important;
+	
+}
+
+/*여기부터 투두 리스트 등록 페이지의 todoTable css */
+.todoTable {
+	background-color:#fafafa;
+	margin:40px 0px 0px 60px;
+	font-family:Noto sans-serif;
+	
+}
+
+.todo-item{
+	background-color:#fafafa;
+    margin-top:20px;
+    border-bottom: 1px solid #ddd; 
+    width:1050px;
+}
+
+.todo-item > input{
+    border: none; 
+    background-color:#fafafa;
+    font-size:18px;
+    font-weight:bold;
+    font-family:Noto sans-serif;
+    margin:0px 0px 5px 5px;
+}
+
+
+/* 삭제버튼 */
+.deleteBtn {
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    float:right
+}
+
+/* 저장버튼 */
+.save{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.save>button{
+	padding: 20px;
+    background-color: #003f5c;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+}
+ 
+ 
+/*  로그인 페이지  */
+.login{
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.login_box{
+	width:550px;
+	background-color:#FFF;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	padding:120px 60px 60px;
+	text-align:center; 
+	margin-top:25px;
+	
+}
+
+.login_box > div{
+	background-color:#FFF;
+}
+
+.input_id{
+	border-radius:8px 8px 0 0;
+	height: 50px;
+    width: 80%;
+    border:1px solid #c5ccd2;
+    border-bottom: none;
+    padding:5px;
+    font-size:16px;
+}
+
+.input_pass{
+	border-radius:0 0 8px 8px;
+	height: 50px;
+    width: 80%;
+	border:1px solid #c5ccd2;
+	 padding:5px;
+	 font-size:16px;
+}
+.goLogin{
+	margin-top:40px;
+	 background-color: #fff;
+}
+
+.goLogin > button{
+	padding: 20px;
+    background-color: #003f5c;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    width: 82%;
+    font-size:16px;
+     
+	
+}
+
+.newUser{
+	padding: 20px;
+    background-color: #fff;
+    border: none;
+    color: black;
+    border-radius: 8px;
+    width: 20%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+/* 로그인 페이지 끝 */
+
+/* 회원가입 페이지 */
+.newUserPage{
+    height: 70%;
+    background-color: #fff;
+    padding: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.memberBox{
+    width: 550px;
+    background-color: #FFF;
+    padding: 20px 60px 60px;
+    text-align: center;
+    margin-top: 25px
+}
+
+.newItem{
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:center;
+	
+}
+
+.newItem > input{
+	width: 70%;
+    height: 35px;
+    border:none;
+	padding:7px;
+	background-color:#f3f4f5;
+	border-radius: 5px;
+	font-size:16px;
+}
+/* 회원가입 페이지 끝 */
