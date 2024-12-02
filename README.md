@@ -1,19 +1,78 @@
 # 하루 일정 관리 "My Day" 프로젝트
 - 프로젝트 기간 : 2024.11.25 ~ 2024.12.01
 - 참여 인원 : 1인(혼자 진행)
-<br>
+<br />
 
 ## 프로젝트 소개
 - 사용자가 자신의 할 일 목록을 관리할 수 있는 웹 애플리케이션입니다.
 - 사용자는 할 일을 추가하고, 수정하고, 완료 여부를 체크하는 등 기본적인 할 일 관리 기능을 제공합니다.
 - 깔끔한 코드 작성, 데이터베이스 관리, 사용자 인터페이스 설계에 중점을 두고 개발되었습니다.
-<br>
+<br />
 
 ## 개발 환경
 - 백엔드 : java, Spring Framework, eGovFramework, MyBatis, JSP, JSTL
 - 프론트엔드 : HTML, CSS, JavaScript, jQuery
 - DB : Oracle, DBeaver
 - IDE : Eclipse
+<br />
+
+## 프로젝트 구조
+- 프로젝트는 간결함을 위해 기타 설정 파일을 제외한 주요 소스파일(java, jsp, css, xml)만 포함되어 있습니다.
+
+```shell
+└─TODO
+    ├─bin
+    │  ├─src
+    │  │  └─main
+    │  │      ├─java
+    │  │      │  └─egovframework
+    │  │      │      └─TODO
+    │  │      │          ├─service
+    │  │      │          │  └─impl
+    │  │      │          └─web
+    │  │      ├─resources
+    │  │      │  └─egovframework
+    │  │      │      └─sqlmap
+    │  │      │          └─example
+    │  │      │              └─mappers
+    │  │      └─webapp
+    │  │          ├─css
+    │  │          │  └─egovframework
+    │  │          └─WEB-INF
+    │  │              ├─config
+    │  │              │  └─egovframework
+    │  │              │      └─springmvc
+    │  │              └─jsp
+    │  │                  └─egovframework
+    │  │                      └─example
+    │  │                          └─TODO
+    │  ├─target
+    │  │  ├─classes
+    │  │  │  └─egovframework
+    │  │  │      ├─example
+    │  │  │      │  ├─cmmn
+    │  │  │      │  │  └─web
+    │  │  │      │  └─sample
+    │  │  │      │      ├─service
+    │  │  │      │      │  └─impl
+    │  │  │      │      └─web
+    │  │  │      ├─sqlmap
+    │  │  │      │  └─example
+    │  │  │      │      └─mappers
+    │  │  │      └─TODO
+    │  │  │          ├─service
+    │  │  │          │  └─impl
+    │  │  │          └─web
+    │  │  ├─generated-sources
+    │  │  │  └─annotations
+    │  │  └─m2e-wtp
+    │  │      └─web-resources
+    │  │          └─META-INF
+    │  │              └─maven
+    │  │                  └─TODO
+    │  │                      └─TODO
+
+  ```
 <br>
 
 ## 프로세스 흐름도
@@ -135,7 +194,6 @@
 
 
 <br />
-
 
 ## 페이지별 기능 
 ### 초기화면
