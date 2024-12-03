@@ -18,16 +18,16 @@
 
 ## 프로젝트 구조
 - 프로젝트는 간결함을 위해 기타 설정 파일을 제외한 주요 소스파일(java, jsp, css, xml)만 포함되어 있습니다.
-- TODO/src/main/java/egovframework/TODO/service/todoService.java : 비즈니스 로직을 처리하는 서비스 계층
-- TODO/src/main/java/egovframework/TODO/service/todoVO.java : 데이터 객체 정의
-- TODO/src/main/java/egovframework/TODO/service/impl/todoServiceImpl.java : 비즈니스 로직을 처리하는 서비스 계층 구현 클래스
-- TODO/src/main/java/egovframework/TODO/service/impl/todoMapper.java : 데이터베이스와 상호작용을 정의한 MyBatis Mapper 인터페이스
-- TODO/src/main/java/egovframework/TODO/web/todoController.java : 사용자 요청을 처리하고 응답을 반환하는 컨트롤러
-- TODO/src/main/resources/egovframework/sqlmap/example/todo_SQL.xml : 데이터베이스 쿼리가 정의된 MyBatis 매퍼 파일
-- TODO/src/main/webapp/WEB-INF/jsp/egovframework/example/TODO/main.jsp : 로그인화면 
-- TODO/src/main/webapp/WEB-INF/jsp/egovframework/example/TODO/newUser.jsp : 회원가입 화면 
-- TODO/src/main/webapp/WEB-INF/jsp/egovframework/example/TODO/todoList.jsp : TODO 리스트 화면 
-- TODO/src/main/webapp/WEB-INF/jsp/egovframework/example/TODO/todoListReg.jsp : TODO 등록 화면 
+- /TODO/service/todoService.java : 비즈니스 로직을 처리하는 서비스 계층
+- /TODO/service/todoVO.java : 데이터 객체 정의
+- /TODO/service/impl/todoServiceImpl.java : 비즈니스 로직을 처리하는 서비스 계층 구현 클래스
+- /TODO/service/impl/todoMapper.java : 데이터베이스와 상호작용을 정의한 MyBatis Mapper 인터페이스
+- /TODO/web/todoController.java : 사용자 요청을 처리하고 응답을 반환하는 컨트롤러
+- /sqlmap/example/todo_SQL.xml : 데이터베이스 쿼리가 정의된 MyBatis 매퍼 파일
+- /jsp/egovframework/example/TODO/main.jsp : 로그인화면 
+- /jsp/egovframework/example/TODO/newUser.jsp : 회원가입 화면 
+- /jsp/egovframework/example/TODO/todoList.jsp : TODO 리스트 화면 
+- /jsp/egovframework/example/TODO/todoListReg.jsp : TODO 등록 화면 
 
 ```shell
 └─TODO
