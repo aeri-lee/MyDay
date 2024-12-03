@@ -14,6 +14,8 @@
 - 프론트엔드 : HTML, CSS, JavaScript, jQuery
 - DB : Oracle, DBeaver
 - IDE : Eclipse
+- Server: Apache Tomcat 9.0
+
 <br />
 
 ## 프로젝트 구조
